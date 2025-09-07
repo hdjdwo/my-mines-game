@@ -13,8 +13,8 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  max-width: 34rem;
-  min-width: 33rem;
+  width: 34dvw;
+  height: 55dvh;
   gap: 0.5rem;
   max-height: 900px;
 }
