@@ -31,6 +31,8 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box;
+  max-height: 770px;
 
 }
 

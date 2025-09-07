@@ -30,7 +30,7 @@ const initialState: GameState = {
     hasMine: false,
   })),
   balance: 2,
-  currency: '/bitcoin.png',
+  currency: 'bitcoin.png',
   winCurrency: 0
 }
 
