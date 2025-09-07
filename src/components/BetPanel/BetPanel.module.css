@@ -4,7 +4,7 @@
   justify-content: start;
   height: 100%;
   max-height: 770px;
-  width: 30vw;
+  width: 30dvw;
   align-items: start;
   padding-left: 1rem;
   background-color: var(--grey-500);
@@ -12,10 +12,10 @@
 }
 
 .betBtn {
-  margin-top: 3vh;
+  margin-top: 3dvh;
 }
 
 .balance {
-  margin-top: 3vh;
+  margin-top: 3dvh;
 }
 

@@ -1,10 +1,10 @@
 .App {
   display: flex;
   background-color: #121010;
-  width: 90vw;
+  width: 90dvw;
   max-width: 1200px;
-  height: 60vh;
-  max-height: 760px;
+  height: 60dvh;
+  max-height: 900px;
   margin-top: 20px;
   font-size: clamp(1.5rem, 4vw, 2.5rem);
 }

@@ -1,7 +1,7 @@
 .text {
   text-align: start;
- width: 15vw;
- font-size: clamp(0.7rem, 4vw, 1rem);
+ width: 15dvw;
+ font-size: clamp(0.7rem, 4dvw, 1rem);
  color: #dccece;
  width: 100%;
 }

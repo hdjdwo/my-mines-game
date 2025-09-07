@@ -1,7 +1,7 @@
 .input {
   background-color: var(--grey-700);
-  width: 15vw;
- font-size: clamp(1rem, 4vw, 1.5rem);
+  width: 15dvw;
+ font-size: clamp(1rem, 4dvw, 1.5rem);
  color: #dccece;
  background: url('/public/bitcoin.png') no-repeat;
 background-repeat: no-repeat;

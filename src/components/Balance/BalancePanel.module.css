@@ -6,20 +6,20 @@
 }
 
 .balance {
-  margin-top: 1vh;
+  margin-top: 1dvh;
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(1rem, 4dvw, 1.5rem);
 color: var(--grey-100);
 }
 
 .refreshText {
-  margin-top: 2vh;
+  margin-top: 2dvh;
   border: 3px solid green;
   padding: 5px 10px;
-  font-size: clamp(1rem, 4vw, 1.5rem);
+  font-size: clamp(1rem, 4dvw, 1.5rem);
 color: var(--grey-200);
 -webkit-touch-callout: none; 
   -webkit-user-select: none;   

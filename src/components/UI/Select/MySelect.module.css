@@ -1,11 +1,11 @@
 .select {
   background-color: var(--grey-700);
-  width: 15vw;
+  width: 15dvw;
   font-size: clamp(1rem, 4vw, 1.5rem);
   color: #dccece;
 }
 
 .selectLabel {
-font-size: clamp(1rem, 4vw, 1.5rem);
+font-size: clamp(1rem, 4dvw, 1.5rem);
 color: var(--grey-200);
 }
