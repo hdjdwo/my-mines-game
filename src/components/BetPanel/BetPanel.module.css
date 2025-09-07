@@ -1,12 +1,19 @@
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: start;
   height: 100%;
   width: 30vw;
-  align-items: center;
+  align-items: start;
+  padding-left: 1rem;
   background-color: var(--grey-500);
 }
 
 .betBtn {
   margin-top: 3vh;
 }
+
+.balance {
+  margin-top: 3vh;
+}
+

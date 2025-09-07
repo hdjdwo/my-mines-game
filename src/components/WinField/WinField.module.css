@@ -1,0 +1,13 @@
+.text {
+  text-align: start;
+ width: 15vw;
+ font-size: clamp(0.7rem, 4vw, 1rem);
+ color: #dccece;
+ width: 100%;
+}
+
+.currency {
+  margin-left: 0.4rem;
+  width: 30px;
+  height: 30px;
+}

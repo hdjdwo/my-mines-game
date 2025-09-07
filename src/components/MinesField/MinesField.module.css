@@ -20,14 +20,22 @@
 position: absolute;
 background-color: #711d1d;
  display: none;
- width: 20rem;
  height: 5rem;
  text-align: center;
  font-size: 4rem;
- left: 8rem;
+ left: 0;
+ right: 0;
  top: 15rem;
+ z-index: 99;
 }
 
 .boom {
   display: inline;
+}
+
+.win {
+  display: inline;
+  font-size: 3rem;
+  background-color: #108b4b;
+  height: 10rem;
 }

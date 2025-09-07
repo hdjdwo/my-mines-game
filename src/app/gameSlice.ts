@@ -12,11 +12,14 @@ interface GameState {
   gameIsStarted: boolean,
   gameIsLose: boolean,
   gameisWin: boolean,
-  board: TileState[]
+  board: TileState[],
+  balance: number,
+  currency: string,
+  winCurrency: number,
 }
 
 const initialState: GameState = {
-  stake: 1,
+  stake: 0.00000001,
   mines: 3,
   minesArray: [],
   gameIsStarted: false,
@@ -26,6 +29,9 @@ const initialState: GameState = {
     isRevealed: false,
     hasMine: false,
   })),
+  balance: 2,
+  currency: '/bitcoin.png',
+  winCurrency: 0
 }
 
 const gameSlice = createSlice({
@@ -71,8 +77,19 @@ reducers: {
         state.board[index].isRevealed = true;
       }
     },
+    changeBalance: (state, action: PayloadAction<number>) => {
+      if(action.payload === 10000) {
+        state.balance = 2
+      } else {
+state.balance += action.payload
+      }
+      
+    },
+    setWinCurrency: (state, action: PayloadAction<number>) => {
+      state.winCurrency = action.payload
+    },
 }
 })
 
-export const {setStake, setMines,  setMinesCount, resetMines, revealTile,setGameStatus, setLose, setWin} = gameSlice.actions;
+export const {setStake, setMines, setWinCurrency,  setMinesCount, resetMines, revealTile,setGameStatus, setLose, setWin, changeBalance} = gameSlice.actions;
 export default gameSlice.reducer

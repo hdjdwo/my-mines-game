@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import classes from './MySelect.module.css'
-import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
+import { useAppDispatch } from '../../../hooks/hooks';
 import { setMinesCount } from '../../../app/gameSlice';
 
 export const MySelect = () => {
   const dispatch = useAppDispatch();
-  const mines = useAppSelector((state) => state.game.mines);
   
 
   const handleOptionClick = (event: React.ChangeEvent<HTMLSelectElement>) => {

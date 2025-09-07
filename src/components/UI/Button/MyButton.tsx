@@ -1,20 +1,19 @@
 import React from 'react'
 import classes from './MyButton.module.css'
-import { useAppDispatch, useAppSelector } from '../../../hooks/hooks'
-import { resetMines, setGameStatus } from '../../../app/gameSlice'
+import { useAppSelector } from '../../../hooks/hooks'
 
-export const MyButton = () => {
-  const dispatch = useAppDispatch()
-  const gameStatus = useAppSelector((state) => state.game.gameIsStarted)
+interface IBnt {
+  text: string
+  hadleStatusGame: (event: React.MouseEvent<HTMLDivElement>) => void
+}
 
-  const handleStatusGame = (event: React.MouseEvent<HTMLDivElement>) => {
-    dispatch(setGameStatus(true))
-    
-  }
+export const MyButton: React.FC<IBnt> = ({text, hadleStatusGame}) => {
+const gameStatus = useAppSelector((state) => state.game.gameIsStarted)
+
 
   const btnStyle = `${classes.button} ${classes.gameStarted}`
 
   return (
-    <div onClick={handleStatusGame} className={gameStatus ? btnStyle : classes.button}>Ставка</div>
+    <div onClick={hadleStatusGame} className={gameStatus ? btnStyle : classes.button}>{text}</div>
   )
 }

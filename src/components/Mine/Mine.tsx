@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import classes from './Mine.module.css'
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
-import { revealTile, setGameStatus, setLose } from '../../app/gameSlice';
+import { revealTile, setGameStatus, setLose, setWin } from '../../app/gameSlice';
 
 interface IMine {
   index: number,
@@ -17,9 +17,11 @@ export const Mine: React.FC<IMine> = ({index, isRevealed, hasMine}) => {
  const gameStatus = useAppSelector((state) => state.game.gameIsStarted)
 
 
+
  const clickHandler = () => {
   if(gameStatus && !isRevealed) {
     dispatch(revealTile(index));
+    
   if(hasMine) {
   dispatch(setGameStatus(false))
   dispatch(setLose(true))
@@ -32,9 +34,6 @@ export const Mine: React.FC<IMine> = ({index, isRevealed, hasMine}) => {
   const tileClasses = `${classes.mine} ${isRevealed ? (hasMine ? classes.mineBomb : classes.diamond ) : ''}`
  
 
-
-
- 
   return (
     <div onClick={clickHandler}  className={tileClasses}>
       

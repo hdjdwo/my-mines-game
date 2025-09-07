@@ -3,9 +3,41 @@
   width: 15vw;
  font-size: clamp(1rem, 4vw, 1.5rem);
  color: #dccece;
+ background: url('/public/bitcoin.png') no-repeat;
+background-repeat: no-repeat;
+background-position: 85%;
+  background-size: 15%;
 }
 
 .intputLabel {
 font-size: clamp(1rem, 4vw, 1.5rem);
 color: var(--grey-200);
+}
+
+.inputBlock{
+  position: relative;
+}
+
+.increment {
+  background: url('/public/arrow-up.png') no-repeat;
+background-repeat: no-repeat;
+background-position: 85%;
+  background-size: 100%;
+  width: 25px;
+height: 25px;
+position: absolute;
+right: 0;
+top: 16px;
+}
+
+.decrement {
+  background: url('/public/arrow-down.png') no-repeat;
+background-repeat: no-repeat;
+background-position: 85%;
+  background-size: 100%;
+  width: 25px;
+height: 25px;
+position: absolute;
+right: 0;
+top: 36px;
 }
