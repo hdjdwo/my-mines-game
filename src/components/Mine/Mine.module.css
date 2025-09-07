@@ -1,0 +1,38 @@
+.mine {
+  background-color: var(--grey-400);
+  box-shadow: var(--grey-500) 0px 5.768px 0px 0px;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 1rem;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: background-color 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.mine:hover {
+  cursor: pointer;
+  background-color: var(--grey-200);
+  box-shadow: var(--grey-300) 0px 5.768px 0px 0px;
+  transform: scale(1.03); 
+ 
+}
+
+
+.mineBomb {
+  background-image: url('/public//mines.png');
+  background-color: var(--red-400);
+  background-repeat: no-repeat;
+  
+  background-position: center;
+  
+  background-size: cover;
+}
+
+.diamond {
+  background-image: url('/public//diamond.png');
+  background-color: var(--yellow-400);
+  background-repeat: no-repeat;
+  
+  background-position: center;
+  
+  background-size: cover;
+}
