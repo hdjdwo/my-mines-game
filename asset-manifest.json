@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/my-mines-game/static/css/main.9ba7514b.css",
-    "main.js": "/my-mines-game/static/js/main.80e4f16c.js",
+    "main.css": "/my-mines-game/static/css/main.867dc72b.css",
+    "main.js": "/my-mines-game/static/js/main.1fb7cea2.js",
     "index.html": "/my-mines-game/index.html",
-    "main.9ba7514b.css.map": "/my-mines-game/static/css/main.9ba7514b.css.map",
-    "main.80e4f16c.js.map": "/my-mines-game/static/js/main.80e4f16c.js.map"
+    "main.867dc72b.css.map": "/my-mines-game/static/css/main.867dc72b.css.map",
+    "main.1fb7cea2.js.map": "/my-mines-game/static/js/main.1fb7cea2.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ba7514b.css",
-    "static/js/main.80e4f16c.js"
+    "static/css/main.867dc72b.css",
+    "static/js/main.1fb7cea2.js"
   ]
 }
