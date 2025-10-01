@@ -13,8 +13,8 @@ export const MySelect = () => {
   }
 
   return (
-    <div>
-    <label className={classes.selectLabel} htmlFor="mines">Количество мин:</label><br />
+    <div className={classes.container}>
+    <label className={classes.selectLabel} htmlFor="mines">Mines:</label>
     <select onChange={handleOptionClick} className={classes.select} name="" id="mines" >
     <option value="3" selected>3</option>
     <option value="4">4</option>

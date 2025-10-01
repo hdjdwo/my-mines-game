@@ -1,11 +1,48 @@
+
+.container {
+  display: flex;
+  flex-direction: column; 
+  gap: 4px;
+}
+
 .select {
-  background-color: var(--grey-700);
-  width: 15dvw;
-  font-size: clamp(1rem, 4vw, 1.5rem);
-  color: #dccece;
+  background-color:  #24292E;
+    border: 2px solid #1C1F22;
+  width: 100%;
+  font-size: clamp(0.5rem, 2dvw, 1.1rem);
+  color: #E7EBEE;
+  margin: 0;
+  padding: 0;
+  line-height: normal;
 }
 
 .selectLabel {
-font-size: clamp(1rem, 4dvw, 1.5rem);
-color: var(--grey-200);
+font-size: clamp(0.5rem, 2dvw, 1.1rem);
+color: #E7EBEE;
+margin: 0;
+  padding: 0;
+  display: block; 
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1025px) {
+  .select {
+    font-size: clamp(0.8rem, 2dvw, 1.7rem);
+    
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .selectLabel {
+    padding: 0;
+    margin-bottom: 5px;
+    font-size: clamp(0.8rem, 2dvw, 1.7rem);
+  }
+  
 }

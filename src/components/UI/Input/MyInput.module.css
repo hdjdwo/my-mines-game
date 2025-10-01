@@ -1,43 +1,59 @@
-.input {
+.input{
   background-color: var(--grey-700);
-  width: 15dvw;
- font-size: clamp(1rem, 4dvw, 1.5rem);
- color: #dccece;
- background: url('/public/bitcoin.png') no-repeat;
-background-repeat: no-repeat;
-background-position: 85%;
-  background-size: 15%;
+  width: 98%;
+  height: 100%;
+ font-size: clamp(0.5rem, 2dvw, 1.1rem);
+ color: #E7EBEE;
+  display: flex;
+    align-items: center;
+    background-color:  #24292E;
+    border: 2px solid #1C1F22;
 }
 
 .intputLabel {
-font-size: clamp(1rem, 4vw, 1.5rem);
-color: var(--grey-200);
+font-size: clamp(0.5rem, 2dvw, 1.1rem);
+color: #E7EBEE;
+padding: 0;
+
 }
 
 .inputBlock{
   position: relative;
 }
 
-.increment {
-  background: url('/public/arrow-up.png') no-repeat;
-background-repeat: no-repeat;
-background-position: 85%;
-  background-size: 100%;
-  width: 25px;
-height: 25px;
-position: absolute;
-right: 0;
-top: 16px;
+.svg {
+  width:clamp(0.4rem, 3dvw, 1.2rem) ;
 }
 
-.decrement {
-  background: url('/public/arrow-down.png') no-repeat;
-background-repeat: no-repeat;
-background-position: 85%;
-  background-size: 100%;
-  width: 25px;
-height: 25px;
-position: absolute;
-right: 0;
-top: 36px;
+.isHidden {
+  display: none;
+}
+
+
+.btc {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 20px;
+  pointer-events: none;
+}
+
+
+
+@media (max-width: 1024px) {
+  .input {
+    font-size: clamp(0.8rem, 2dvw, 1.7rem);
+  }
+
+  .intputLabel {
+    font-size: clamp(0.8rem, 2dvw, 1.7rem);
+  }
+  
 }

@@ -6,14 +6,12 @@ import { changeBalance } from '../../app/gameSlice'
 export const BalancePanel = () => {
 
   const balance = useAppSelector((state) => state.game.balance)
-  const currency = useAppSelector((state) => state.game.currency)
   const dispatch = useAppDispatch()
 
   return (
     <div>
       <p className={classes.balanceText}>Игровой баланс:</p>
       <div className={classes.balance}>{balance}
-        <img className={classes.currency} src={currency} alt="" />
       </div>
       <div onClick={() => dispatch(changeBalance(10000))} className={classes.refreshText}>Обновить баланс</div>
     </div>

@@ -1,0 +1,35 @@
+.SwiperContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: clamp(0.7rem, 4dvw, 1.5rem);;
+  color: #E7EBEE;
+  border: 2px solid ;
+  width: 100%;
+  border-radius: 30px;
+  border: 6px solid #24292E;
+  background-color: #24292E;
+  margin: 0;
+}
+
+.active {
+  background-color: #1B1F22;
+}
+
+.manual {
+  cursor: pointer;
+text-align: center;
+ width: 45%;
+ height: 50%;
+ border-radius: 30px;
+ padding: 3%;
+}
+
+.auto {
+  cursor: pointer;
+  text-align: center;
+width: 45%;
+height: 50%;
+border-radius: 30px;
+padding: 3%;
+}

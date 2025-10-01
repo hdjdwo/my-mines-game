@@ -1,13 +1,54 @@
 .text {
-  text-align: start;
+  
  width: 15dvw;
- font-size: clamp(0.7rem, 4dvw, 1rem);
+ font-size: clamp(0.5rem, 2dvw, 0.9rem);
  color: #dccece;
  width: 100%;
 }
 
-.currency {
-  margin-left: 0.4rem;
-  width: 30px;
-  height: 30px;
+
+.container {
+  margin-top: 20px;
+}
+
+
+.btc {
+  padding-left: 1rem;
+  
+}
+
+.svg {
+  max-width: 100%;
+}
+
+.currencyBlock {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: start;
+margin-bottom: 15%;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+   display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 3dvh;
+  }
+
+  .text {
+    font-size: clamp(0.8rem, 2dvw, 1.7rem);
+  }
+  
+}
+
+@media (max-width: 915px) {
+  .button {
+    font-size: clamp(0.8rem, 2dvw, 1.7rem);
+  }
+  
 }

@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 interface TileState {
   isRevealed: boolean,
   hasMine: boolean,
+  selected?: boolean
 }
 
 interface GameState {
@@ -14,8 +15,10 @@ interface GameState {
   gameisWin: boolean,
   board: TileState[],
   balance: number,
-  currency: string,
   winCurrency: number,
+  numOfBets: number,
+  gameMode: string,
+  selectedTiles: number[]
 }
 
 const initialState: GameState = {
@@ -30,8 +33,10 @@ const initialState: GameState = {
     hasMine: false,
   })),
   balance: 2,
-  currency: 'bitcoin.png',
-  winCurrency: 0
+  winCurrency: 0,
+  numOfBets: 0,
+  gameMode: 'Manual',
+  selectedTiles: []
 }
 
 const gameSlice = createSlice({
@@ -63,6 +68,10 @@ reducers: {
         state.gameIsLose = false;
         state.gameisWin = false
       }
+      if(action.payload && state.gameMode === 'Auto') {
+       
+        state.gameIsStarted = action.payload
+      }
     },
     setLose: (state, action: PayloadAction<boolean>) => {
       state.gameIsLose = action.payload
@@ -88,8 +97,27 @@ state.balance += action.payload
     setWinCurrency: (state, action: PayloadAction<number>) => {
       state.winCurrency = action.payload
     },
+    changeGameMode: (state, action: PayloadAction<string>) => {
+      state.gameMode = action.payload
+      state.selectedTiles = []
+    },
+    setNumberOfBets: (state, action: PayloadAction<number | undefined>) => {
+      if (typeof action.payload === 'number') {
+    state.numOfBets = action.payload
+  } else {
+    state.numOfBets -= 1
+  }
+    },
+    setSelectedTiles: (state, action: PayloadAction<number>) => {
+      if(state.selectedTiles.includes(action.payload)) {
+       state.selectedTiles = state.selectedTiles.filter(i => i !== action.payload)
+      } else {
+state.selectedTiles.push(action.payload)
+      }
+      
+    },
 }
 })
 
-export const {setStake, setMines, setWinCurrency,  setMinesCount, resetMines, revealTile,setGameStatus, setLose, setWin, changeBalance} = gameSlice.actions;
+export const {setStake, setMines, setWinCurrency,  setMinesCount,  revealTile,setGameStatus, setLose, setWin, changeBalance, changeGameMode, setNumberOfBets, setSelectedTiles} = gameSlice.actions;
 export default gameSlice.reducer

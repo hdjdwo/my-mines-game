@@ -1,47 +1,69 @@
 .fieldWrapper  {
   display: flex;
   justify-content: center;
-  background-color: var(--grey-700);
-  width: 90dvw;
-  max-width: 700px;
-  height: 70dvh;
-  max-height: 800px;
+  align-items: center;
+  background-color: #1b1f22;
+  box-shadow: 10px 0 15px -5px  rgba(0,0,0,0.35);
+  width: 60dvw;
 }
 
 .field{
- padding: 1rem;
  position: relative;
-  display: grid;
+ box-sizing: border-box;
+   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-   width: 90dvw;
-  max-width: 700px;
-  height: 70dvh;
-  max-height: 800px;
-  gap: 0.5rem;
-  max-height: 750px;
+  grid-auto-rows: 1fr; 
+  gap: 2%;
+  height: 100%;
+  padding: 20px;
+  aspect-ratio: 1 / 1; 
+
 }
 
 .text {
 position: absolute;
-background-color: #711d1d;
- display: none;
- height: 5rem;
  text-align: center;
  font-size: 4rem;
  left: 0;
  right: 0;
- top: 15rem;
+ top: 0;
+ bottom: 0;
  z-index: 99;
+ background-color: #1b1f228b;
 }
 
-.boom {
-  display: inline;
-}
 
 .win {
-  display: inline;
+  display: flex;
   font-size: 3rem;
   background-color: #108b4b;
-  height: 10rem;
+  
+}
+
+
+@media (max-width: 1024px) {
+  .field {
+    position: relative;
+   display: grid;
+   padding: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 1fr; 
+  width: 100%;
+  
+  gap: 2%;
+  aspect-ratio: 1 / 1; 
+  
+  }
+
+  .fieldWrapper  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1b1f22;
+  box-shadow: 10px 0 15px -5px  rgba(0,0,0,0.35);
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+}
+  
 }
